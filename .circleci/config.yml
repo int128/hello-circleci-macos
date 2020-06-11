@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  build:
+    macos:
+      xcode: 11.5.0
+    steps:
+      - checkout
+      - run: env
+      - run: echo ~/
+      - run: echo $HOME
+      - run: pwd
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - build
